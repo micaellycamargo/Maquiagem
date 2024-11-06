@@ -159,6 +159,12 @@ header p {
   margin-top: 20px;
 }
 
+/* Ajustando o tamanho do ícone dentro do botão */
+.whatsapp-btn img {
+  width: 30px; /* Tamanho do ícone do WhatsApp */
+  margin-right: 10px; /* Espaço entre o ícone e o texto */
+}
+
 /* Media Queries para Responsividade */
 
 /* Para telas pequenas (dispositivos móveis) */
@@ -218,6 +224,11 @@ header p {
   .whatsapp-btn {
     font-size: 1em;
   }
+
+  /* Ajustando o ícone no WhatsApp no mobile */
+  .whatsapp-btn img {
+    width: 25px; /* Tamanho do ícone no mobile */
+  }
 }
 
 /* Para telas médias (tablets e dispositivos de tamanho intermediário) */
@@ -241,6 +252,11 @@ header p {
   .whatsapp-btn {
     font-size: 1.1em;
   }
+
+  /* Ajustando o ícone no WhatsApp */
+  .whatsapp-btn img {
+    width: 28px; /* Tamanho do ícone no tablet */
+  }
 }
 
 /* Para telas grandes (desktop) */
@@ -256,5 +272,10 @@ header p {
 
   .gallery {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Ajustando o ícone no WhatsApp no desktop */
+  .whatsapp-btn img {
+    width: 30px; /* Tamanho do ícone no desktop */
   }
 }
