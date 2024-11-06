@@ -161,7 +161,7 @@ header p {
 
 /* Ajustando o tamanho do ícone dentro do botão */
 .whatsapp-btn img {
-  width: 30px; /* Tamanho do ícone do WhatsApp */
+  width: 25px; /* Tamanho adequado do ícone no mobile */
   margin-right: 10px; /* Espaço entre o ícone e o texto */
 }
 
@@ -225,7 +225,7 @@ header p {
     font-size: 1em;
   }
 
-  /* Ajustando o ícone no WhatsApp no mobile */
+  /* Ajustando o ícone do WhatsApp no mobile */
   .whatsapp-btn img {
     width: 25px; /* Tamanho do ícone no mobile */
   }
