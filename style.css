@@ -38,6 +38,7 @@ header p {
 /* Seção Sobre a Maquiadora */
 .about-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   margin: 40px 0;
@@ -56,6 +57,7 @@ header p {
 
 .bio {
   max-width: 500px;
+  text-align: left;
 }
 
 .bio h2 {
@@ -76,6 +78,7 @@ header p {
 
 .service-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   justify-content: center;
@@ -122,20 +125,12 @@ header p {
 
 .review {
   background-color: #fff;
-  padding: 20px;
+  padding: 15px;
   margin: 10px 0;
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   font-size: 1.1em;
   color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.review:hover {
-  transform: translateY(-5px);
 }
 
 .review .stars {
@@ -145,22 +140,8 @@ header p {
 }
 
 .review .stars img {
-  width: 20px; /* Tamanho das estrelas */
-  margin: 0 2px; /* Espaçamento entre as estrelas */
-}
-
-.review .client-name {
-  font-weight: bold;
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #e60073;
-}
-
-.review p {
-  text-align: center;
-  color: #555;
-  font-size: 1em;
-  margin-top: 10px;
+  width: 20px;
+  margin: 0 5px;
 }
 
 /* Botão de WhatsApp */
@@ -171,16 +152,109 @@ header p {
   background-color: #25d366;
   color: #fff;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 30px;
+  font-weight: bold;
   font-size: 1.2em;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
-.whatsapp-btn:hover {
-  background-color: #128c7e;
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (dispositivos móveis) */
+@media (max-width: 768px) {
+
+  /* Ajustando o título do cabeçalho */
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  /* Sobre a maquiadora */
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .about-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .bio {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .bio h2 {
+    font-size: 1.5em;
+  }
+
+  /* Tipos de Maquiagem */
+  .services h2 {
+    font-size: 1.5em;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /* Galeria */
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* Botão do WhatsApp */
+  .whatsapp-btn {
+    font-size: 1em;
+  }
 }
 
-.whatsapp-btn img {
-  width: 25px;
-  margin-right: 10px;
+/* Para telas médias (tablets e dispositivos de tamanho intermediário) */
+@media (max-width: 1024px) {
+  
+  /* Ajustando o título do cabeçalho */
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  /* Ajustes nas seções */
+  .services h2 {
+    font-size: 1.7em;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Ajustando o botão do WhatsApp */
+  .whatsapp-btn {
+    font-size: 1.1em;
+  }
+}
+
+/* Para telas grandes (desktop) */
+@media (min-width: 1025px) {
+  /* Ajustando as seções */
+  .service-cards {
+    gap: 30px;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
